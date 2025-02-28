@@ -3,6 +3,10 @@ import Footer from "../components/Footer.astro";
 import Navbar from "../components/Navbar.astro";
 ---
 
+<script>
+  import "nano-analytics";
+</script>
+
 <!doctype html>
 <html lang="en">
 	<head>
@@ -27,3 +31,8 @@ import Navbar from "../components/Navbar.astro";
 		height: 100%;
 	}
 </style>
+
+<nano-analytics
+  projectKey="m7men0weh4ljd"
+  userId="a5fb0950-8486-43a2-8ee5-dc4f551a4003"
+/>
