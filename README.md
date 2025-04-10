@@ -1,23 +1,75 @@
-# Astrodev: Template
+# Portfolio
 
-A template for developers made in Astro. 🧑‍🚀
+## Table of Contents
 
-```sh
-git clone https://github.com/alamguardin/astrodev.git
-```
+1. [Description](#description)
+2. [Team](#team)
+3. [Technologies Used](#technologies-used)
+4. [Hosting & Deployment](#hosting--deployment)
+5. [Expenses & Budget](#expenses--budget)
+6. [Installation & Setup](#installation--setup)
+7. [License](#license)
+8. [Contact](#contact)
 
-**Demo:** [Preview](https://astrodev-template.netlify.app/)
-![Thumnail](/src/assets/astrodev-thumbnail.png)
-## 🧞 Commands
+## Description
 
-All commands are run from the root of the project, from a terminal:
+The official website of software company (not registered) Aspecs.
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
+## Team
 
+- **[Paul Pietzko]** - Project Manager, Frontend Developer, Backend Developer
+- (Add more as needed)
+
+## Technologies Used
+
+Used Technologies, Frameworks, and Tools used in the project:
+
+### Dashboard
+- [Git](https://github.com/aspecsWeb/aspecs-website)
+- Programming Languages: TypeScript
+- Frameworks: AstroJS, Tailwind, DaisyUI
+- Database: -
+- APIs: -
+
+## Hosting & Deployment
+
+- **Hosting Provider**: Vercel
+- **Domain Name**: aspecs.ch
+- **Deployment Process**: CI/CD pipelines on main branch
+
+## Expenses & Budget
+
+Associated costs for running the project:
+
+- **Domain**: $5 per year per domain
+- **Hosting**: $20
+- **APIs & Services**: -
+- **Other Costs**: -
+
+## Installation & Setup
+
+Provide steps for setting up the project locally:
+
+1. Clone the repository:
+   ```sh
+   git clone https://github.com/aspecsWeb/aspecs-website.git
+   ```
+2. Install dependencies:
+   ```sh
+   npm install
+   ```
+3. Start the development server:
+   ```sh
+   npm run dev
+   ```
+
+## License
+
+This project is licensed under the [Proprietary License](LICENSE). All rights reserved. Unauthorized copying, distribution, or modification of this project, via any medium, is strictly prohibited.
+
+## Contact
+
+Provide contact details for support or inquiries:
+
+- Email: [paul.pietzko@icloud.com](mailto:paul.pietzko@icloud.com)
+- Twitter: @paulpietzko
