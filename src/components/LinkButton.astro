@@ -11,8 +11,8 @@ const { href, text, iconClass, className } = Astro.props;
 
 <a
   href={href}
-  class={`inline-flex items-center gap-4 border border-white text-white text-sm font-medium rounded-full p-2 pl-4 transition hover:bg-white hover:text-black ${className}`}
->
+  class={`inline-flex items-center gap-4 border border-white text-white text-sm font-medium rounded-full p-2 pl-4 hover:bg-white hover:text-black transition group`}
+  >
   <span>{text}</span>
   {
     iconClass && (
