@@ -1,64 +1,32 @@
-<section>
-  <h2 class="text-4xl font-semibold mb-12">
+---
+// src/components/Projects.astro
+import { projects } from "../data/projects";
+---
+
+<section class="mt-32">
+  <h2 class="text-5xl font-semibold text-white">
     Check out our <span class="text-green-300">projects</span> and see how we turn
     <span class="text-pink-300">ideas</span> into <span class="text-violet-300"
       >apps</span
     >.
   </h2>
-  <ul class="grid md:grid-cols-2 gap-x-10 gap-y-8">
-    <li class="relative group aspect-[4/3] overflow-hidden rounded-lg">
-      <a href="https://www.letteer.me" class="block w-full h-full">
-        <img
-          src="letteer.png"
-          alt="Letteer"
-          class="object-cover w-full h-full"
-        />
-        <div
-          class="absolute inset-0 opacity-0 group-hover:opacity-100 transition duration-300 bg-[linear-gradient(to_top_right,rgba(0,0,0,0.7)_30%,transparent_80%)]"
-        >
-        </div>
-        <h3
-          class="absolute bottom-4 left-4 text-white text-xl font-semibold opacity-0 group-hover:opacity-100 transition duration-300 z-10"
-        >
-          Letteer
-        </h3>
-      </a>
-    </li>
-    <li class="relative group aspect-[4/3] overflow-hidden rounded-lg">
-      <a href="https://www.nanosights.dev" class="block w-full h-full">
-        <img
-          src="nanosights.png"
-          alt="NanoSights"
-          class="object-cover w-full h-full"
-        />
-        <div
-          class="absolute inset-0 opacity-0 group-hover:opacity-100 transition duration-300 bg-[linear-gradient(to_top_right,rgba(0,0,0,0.7)_30%,transparent_80%)]"
-        >
-        </div>
-        <h3
-          class="absolute bottom-4 left-4 text-white text-xl font-semibold opacity-0 group-hover:opacity-100 transition duration-300 z-10"
-        >
-          NanoSights
-        </h3>
-      </a>
-    </li>
-    <li class="relative group aspect-[4/3] overflow-hidden rounded-lg">
-      <a href="https://www.gaming.aspecs.ch" class="block w-full h-full">
-        <img
-          src="aspecsgaming.png"
-          alt="Aspecs Gaming"
-          class="object-cover w-full h-full"
-        />
-        <div
-          class="absolute inset-0 opacity-0 group-hover:opacity-100 transition duration-300 bg-[linear-gradient(to_top_right,rgba(0,0,0,0.7)_30%,transparent_80%)]"
-        >
-        </div>
-        <h3
-          class="absolute bottom-4 left-4 text-white text-xl font-semibold opacity-0 group-hover:opacity-100 transition duration-300 z-10"
-        >
-          Aspecs Gaming
-        </h3>
-      </a>
-    </li>
+  <ul class="grid grid-cols-1 sm:grid-cols-2 gap-x-10 gap-y-8 mt-16">
+    {
+      projects.map((project) => (
+        <li class="relative group aspect-video overflow-hidden rounded-lg">
+          <a href={`/projects/${project.key}`} class="block w-full h-full">
+            <img
+              src={project.image}
+              alt={project.name}
+              class="object-cover w-full h-full transition-transform duration-300 group-hover:scale-105"
+            />
+            <div class="absolute inset-0 bg-gradient-to-tr from-black/80 to-transparent opacity-0 group-hover:opacity-100 transition duration-300" />
+            <h3 class="absolute bottom-4 left-4 text-white text-xl font-semibold opacity-0 group-hover:opacity-100 transition duration-300">
+              {project.name}
+            </h3>
+          </a>
+        </li>
+      ))
+    }
   </ul>
 </section>

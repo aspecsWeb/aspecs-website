@@ -1,0 +1,25 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { projects } from '../../data/projects';
+
+export async function getStaticPaths() {
+  return projects.map((project) => ({
+    params: { key: project.key },
+    props: { project },
+  }));
+}
+
+const { project } = Astro.props;
+---
+
+<Layout title={project.name}>
+  <section class="mt-40 mb-32 max-w-3xl">
+    <a href="/#projects" class="text-sm text-violet-300 hover:underline mb-8 inline-block">← Back to projects</a>
+    <h1 class="text-5xl font-semibold text-white mb-8">{project.name}</h1>
+    <img src={project.image} alt={project.name} class="rounded-lg w-full mb-8" />
+    <p class="text-base text-gray-300 mb-6">{project.description}</p>
+    <a href={project.url} target="_blank" class="inline-block mt-4 text-violet-300 underline hover:text-white transition">
+      Visit Project ↗
+    </a>
+  </section>
+</Layout>
