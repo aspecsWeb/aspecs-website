@@ -2,61 +2,81 @@
 const currentYear = new Date().getFullYear();
 ---
 
-<section class="contact" id="contact">
-  <h2 class="heading-2">
-    If you have a great <span class="violet">idea</span> or an exciting <span
-      class="green">project,</span
-    > feel free to get in touch with me!
+<section id="contact" class="my-24 px-4">
+  <h2 class="text-white text-3xl font-semibold max-w-4xl">
+    If you have a great <span class="text-violet-300">idea</span> or an exciting
+    <span class="text-emerald-300">project,</span> feel free to get in touch with
+    me!
   </h2>
-  <ul class="social">
+
+  <ul class="mt-16 flex flex-wrap justify-center gap-6">
     <li>
       <a
-        href="#https://www.instagram.com/aspecsweb/"
-        role="button"
-        class="button"
+        href="https://www.instagram.com/aspecsweb/"
+        class="flex items-center gap-4 border border-white text-white text-sm font-medium rounded-full px-4 py-2 hover:bg-white hover:text-black transition"
       >
-        <span class="button-text">Instagram</span>
-        <span class="button-box-icon">
+        Instagram
+        <span
+          class="w-10 h-10 flex items-center justify-center bg-white text-black rounded-full text-xl hover:bg-black hover:text-white transition"
+        >
           <i class="ri-instagram-fill"></i>
         </span>
       </a>
     </li>
     <li>
-      <a href="https://x.com/aspecsweb" role="button" class="button">
-        <span class="button-text">Twitter</span>
-        <span class="button-box-icon">
+      <a
+        href="https://x.com/aspecsweb"
+        class="flex items-center gap-4 border border-white text-white text-sm font-medium rounded-full px-4 py-2 hover:bg-white hover:text-black transition"
+      >
+        Twitter
+        <span
+          class="w-10 h-10 flex items-center justify-center bg-white text-black rounded-full text-xl hover:bg-black hover:text-white transition"
+        >
           <i class="ri-twitter-fill"></i>
         </span>
       </a>
     </li>
     <li>
-      <a href="#" role="button" class="button">
-        <span class="button-text">YouTube</span>
-        <span class="button-box-icon">
+      <a
+        href="#"
+        class="flex items-center gap-4 border border-white text-white text-sm font-medium rounded-full px-4 py-2 hover:bg-white hover:text-black transition"
+      >
+        YouTube
+        <span
+          class="w-10 h-10 flex items-center justify-center bg-white text-black rounded-full text-xl hover:bg-black hover:text-white transition"
+        >
           <i class="ri-youtube-fill"></i>
         </span>
       </a>
     </li>
     <li>
-      <a href="mailto:info@aspecs.ch" role="button" class="button">
-        <span class="button-text">Email</span>
-        <span class="button-box-icon">
+      <a
+        href="mailto:info@aspecs.ch"
+        class="flex items-center gap-4 border border-white text-white text-sm font-medium rounded-full px-4 py-2 hover:bg-white hover:text-black transition"
+      >
+        Email
+        <span
+          class="w-10 h-10 flex items-center justify-center bg-white text-black rounded-full text-xl hover:bg-black hover:text-white transition"
+        >
           <i class="ri-mail-fill"></i>
         </span>
       </a>
     </li>
   </ul>
-  <footer class="contact-footer">
-    <p class="text-normal">
-      Copyright © {currentYear}
-      <a class="text-normal" href="https://www.aspecs.ch">Aspecs</a>. All rights
-      reserved.
+
+  <footer
+    class="mt-32 text-center text-zinc-300 text-base font-medium space-y-2"
+  >
+    <p>
+      © {currentYear}
+      <a href="https://www.aspecs.ch" class="hover:underline">Aspecs</a>. All
+      rights reserved.
     </p>
-    <p class="text-normal">
-      Designed by <a class="text-normal" href="https://github.com/alamguardin"
-        >Alam Guardin</a
-      >
+    <p>
+      Designed by <a
+        href="https://github.com/alamguardin"
+        class="hover:underline">Alam Guardin</a>
     </p>
-    <a href="/imprint" class="text-normal">Imprint</a>
+    <a href="/imprint" class="hover:underline">Imprint</a>
   </footer>
 </section>
