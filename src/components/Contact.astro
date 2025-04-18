@@ -1,5 +1,7 @@
 ---
 import { socialLinks } from "../lib/sociallinks";
+import LinkButton from "../components/LinkButton.astro";
+
 const currentYear = new Date().getFullYear();
 ---
 
@@ -8,15 +10,7 @@ const currentYear = new Date().getFullYear();
     {
       socialLinks.map(({ name, href, iconClass }) => (
         <li>
-          <a
-            href={href}
-            class="flex items-center gap-4 border border-white text-white text-sm font-medium rounded-full p-2 pl-4 hover:bg-white hover:text-black transition group"
-          >
-            {name}
-            <span class="w-10 h-10 flex items-center justify-center bg-white text-black rounded-full text-xl transition group-hover:bg-black group-hover:text-white">
-              <i class={iconClass} />
-            </span>
-          </a>
+          <LinkButton href={href} text={name} iconClass={iconClass} />
         </li>
       ))
     }
@@ -31,7 +25,7 @@ const currentYear = new Date().getFullYear();
       rights reserved.
     </p>
     <p>
-      Inspired of <a
+      Designed by <a
         href="https://github.com/alamguardin"
         class="hover:underline">Alam Guardin</a
       >

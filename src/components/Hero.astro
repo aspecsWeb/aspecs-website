@@ -1,3 +1,7 @@
+---
+import LinkButton from "./LinkButton.astro";
+---
+
 <header class="py-7 px-4">
   <nav class="flex justify-between items-center">
     <div></div>
@@ -16,16 +20,11 @@
       <span class="text-pink-300">innovation</span>.
     </h1>
 
-    <a
+    <LinkButton
       href="#about"
-      class="mt-6 inline-flex items-center gap-4 border border-white text-white text-sm font-medium rounded-full p-2 pl-4 transition hover:bg-white hover:text-black"
-    >
-      <span>Learn more</span>
-      <span
-        class="w-10 h-10 flex items-center justify-center bg-white text-black rounded-full text-xl hover:bg-black hover:text-white transition"
-      >
-        <i class="ri-arrow-down-line"></i>
-      </span>
-    </a>
+      text="Learn more"
+      iconClass="ri-arrow-down-line"
+      className="mt-6 inline-flex"
+    />
   </div>
 </header>
