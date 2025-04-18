@@ -1,67 +1,25 @@
 ---
+import { socialLinks } from "../lib/sociallinks";
 const currentYear = new Date().getFullYear();
 ---
 
 <section id="contact" class="my-24 px-4">
-  <h2 class="text-white text-3xl font-semibold max-w-4xl">
-    If you have a great <span class="text-violet-300">idea</span> or an exciting
-    <span class="text-emerald-300">project,</span> feel free to get in touch with
-    me!
-  </h2>
-
-  <ul class="mt-16 flex flex-wrap justify-center gap-6">
-    <li>
-      <a
-        href="https://www.instagram.com/aspecsweb/"
-        class="flex items-center gap-4 border border-white text-white text-sm font-medium rounded-full p-2 hover:bg-white hover:text-black transition"
-      >
-        Instagram
-        <span
-          class="w-10 h-10 flex items-center justify-center bg-white text-black rounded-full text-xl hover:bg-black hover:text-white transition"
-        >
-          <i class="ri-instagram-fill"></i>
-        </span>
-      </a>
-    </li>
-    <li>
-      <a
-        href="https://x.com/aspecsweb"
-        class="flex items-center gap-4 border border-white text-white text-sm font-medium rounded-full p-2 hover:bg-white hover:text-black transition"
-      >
-        Twitter
-        <span
-          class="w-10 h-10 flex items-center justify-center bg-white text-black rounded-full text-xl hover:bg-black hover:text-white transition"
-        >
-          <i class="ri-twitter-fill"></i>
-        </span>
-      </a>
-    </li>
-    <li>
-      <a
-        href="#"
-        class="flex items-center gap-4 border border-white text-white text-sm font-medium rounded-full p-2 hover:bg-white hover:text-black transition"
-      >
-        YouTube
-        <span
-          class="w-10 h-10 flex items-center justify-center bg-white text-black rounded-full text-xl hover:bg-black hover:text-white transition"
-        >
-          <i class="ri-youtube-fill"></i>
-        </span>
-      </a>
-    </li>
-    <li>
-      <a
-        href="mailto:info@aspecs.ch"
-        class="flex items-center gap-4 border border-white text-white text-sm font-medium rounded-full p-2 hover:bg-white hover:text-black transition"
-      >
-        Email
-        <span
-          class="w-10 h-10 flex items-center justify-center bg-white text-black rounded-full text-xl hover:bg-black hover:text-white transition"
-        >
-          <i class="ri-mail-fill"></i>
-        </span>
-      </a>
-    </li>
+  <ul class="mt-32 flex flex-wrap justify-center gap-6">
+    {
+      socialLinks.map(({ name, href, iconClass }) => (
+        <li>
+          <a
+            href={href}
+            class="flex items-center gap-4 border border-white text-white text-sm font-medium rounded-full p-2 pl-4 hover:bg-white hover:text-black transition group"
+          >
+            {name}
+            <span class="w-10 h-10 flex items-center justify-center bg-white text-black rounded-full text-xl transition group-hover:bg-black group-hover:text-white">
+              <i class={iconClass} />
+            </span>
+          </a>
+        </li>
+      ))
+    }
   </ul>
 
   <footer
@@ -73,9 +31,10 @@ const currentYear = new Date().getFullYear();
       rights reserved.
     </p>
     <p>
-      Designed by <a
+      Inspired of <a
         href="https://github.com/alamguardin"
-        class="hover:underline">Alam Guardin</a>
+        class="hover:underline">Alam Guardin</a
+      >
     </p>
     <a href="/imprint" class="hover:underline">Imprint</a>
   </footer>
