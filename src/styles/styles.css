@@ -9,3 +9,7 @@
   --violet: #c4b5fd;
   --pink: #fda4af;
 }
+
+html {
+  scroll-behavior: smooth;
+}
