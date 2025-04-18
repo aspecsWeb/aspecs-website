@@ -1,6 +1,7 @@
 ---
-import Layout from '../../layouts/Layout.astro';
-import { projects } from '../../data/projects';
+import Contact from "../../components/Contact.astro";
+import Layout from "../../layouts/Layout.astro";
+import { projects } from "../../lib/projects";
 
 export async function getStaticPaths() {
   return projects.map((project) => ({
@@ -13,13 +14,60 @@ const { project } = Astro.props;
 ---
 
 <Layout title={project.name}>
-  <section class="mt-40 mb-32 max-w-3xl">
-    <a href="/#projects" class="text-sm text-violet-300 hover:underline mb-8 inline-block">← Back to projects</a>
-    <h1 class="text-5xl font-semibold text-white mb-8">{project.name}</h1>
-    <img src={project.image} alt={project.name} class="rounded-lg w-full mb-8" />
-    <p class="text-base text-gray-300 mb-6">{project.description}</p>
-    <a href={project.url} target="_blank" class="inline-block mt-4 text-violet-300 underline hover:text-white transition">
-      Visit Project ↗
+  <header>
+    <nav class="my-7 flex justify-between">
+      <div></div>
+      <div>
+        <a href="/#projects" class="text-lg text-gray-300 underline"
+          >Back to Projects</a
+        >
+      </div>
+    </nav>
+    <h1 class="text-6xl font-semibold text-white">{project.name}</h1>
+  </header>
+
+  <section class="text-lg text-gray-300">
+    <p class="text-base text-zinc-500 mt-2">
+      Started: {new Date(project.startDate).toLocaleDateString()}
+    </p>
+    <img
+      src={project.image}
+      alt={project.name}
+      class="rounded-2xl w-full mb-10 border border-zinc-800 mt-10"
+    />
+
+    <a
+      href={project.website}
+      target="_blank"
+      class="inline-flex items-center gap-2 text-base underline hover:text-white transition mb-10"
+    >
+      Visit Project
     </a>
+
+    <p class="text-lg text-zinc-300 leading-relaxed mb-10">
+      {project.description}
+    </p>
+
+    <div class="mb-10">
+      <h2 class="text-2xl font-semibold text-white mb-3">Key Features</h2>
+      <ul class="list-disc list-inside text-zinc-300 space-y-2">
+        {project.metadata.features.map((feature) => <li>{feature}</li>)}
+      </ul>
+    </div>
+
+    <section class="mb-10">
+      <h2 class="text-2xl font-semibold text-white mb-3">Technologies</h2>
+      <ul class="flex flex-wrap gap-2">
+        {
+          project.metadata.technologies.map((tech) => (
+            <li class="px-4 py-2 rounded-full text-base text-violet-200 bg-violet-800/20 border border-violet-700">
+              {tech}
+            </li>
+          ))
+        }
+      </ul>
+    </section>
   </section>
+
+  <Contact />
 </Layout>
